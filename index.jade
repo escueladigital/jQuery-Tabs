@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+html(lang="es")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
+		script(src="//code.jquery.com/jquery-1.11.3.min.js")
+		link(rel="stylesheet", href="estilos.css")
+		title jQuery Tabs
+	body
+		h1 jQuery Tabs
+		//- Contenedor para los tabs
+		.tabs__links
+			//- Loop para crear los cinco enlaces
+			- for (var i=1; i<=5; i++)
+				//- Cada uno de los enlaces
+				a(href="#seccion-#{i}") Seccion #{i}
+		//- Contenedor para los contenidos
+		.tabs__contents
+			//- Loop para crear los cinco contenidos
+			- for (var i=1; i<=5; i++)
+				//- Cada uno de los contenidos
+				.tabs__contents__item(id="seccion-#{i}")
+					p Contenido #{i}
+					p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis alias voluptates ducimus ipsam a ab illum repellat eos dolorem consequuntur, debitis beatae quia quas facere numquam excepturi corporis voluptas possimus?
+					p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione hic ex illum quaerat eaque esse placeat nihil tenetur numquam? Aliquam debitis iusto voluptatibus, quas nulla quam magni nisi optio nobis.
+		//- Creditos
+		a(href="http://escueladigital.pe" id="credits") by Escuela Digital	
+	script(src="scripts.js")
